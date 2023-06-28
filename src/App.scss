@@ -1,8 +1,17 @@
 .App {
+padding-top: 150px;
   text-align: center;
   background: url(../src/Asstes/Images/wp2284535.jpg) no-repeat;
   min-height: 100vh;
   background-position: center center;
   background-size: cover;
   color: red;
+  h1{
+    margin-top: 300px;
+  background-color: white;
+  width: fit-content;
+  display: block;
+  margin: 0px auto 15px;
+  border-radius: 10px;
+  }
 }
