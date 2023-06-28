@@ -9,22 +9,24 @@ function Dashboard () {
     const { data } = useQuery(getCompanydetails);
     const client = useApolloClient();
 
-
-    // Read data from the cache
     const cachedData = client.readQuery({
         query: getCompanydetails,
     });
 
-    // Write data to the cache
-    const newData = {
+    const updatedData = {
         ...cachedData?.company,
         company: {
             ...cachedData,
-            newAIProduct: 'Chat GPT',
+            newAIProduct: 'Chat GPT'
         },
     };
+    client.writeQuery({
+        query: getCompanydetails,
+        data: {
+            company: updatedData,
+        },
+    });
 
-    console.log('newData', newData)
     return (
         <>
             <div className="main_table">
@@ -57,7 +59,7 @@ function Dashboard () {
                             <tr>
                                 <th scope="row">4</th>
                                 <td>New AI Product</td>
-                                <td>{newData?.company?.newAIProduct}</td>
+                                <td>{updatedData?.company?.newAIProduct}</td>
                             </tr>
                         </tbody>
                     </Table>

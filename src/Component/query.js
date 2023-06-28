@@ -10,12 +10,6 @@ import { gql } from 'graphql-tag';
       founder
       employees
       launch_sites
-      headquarters {
-        address
-        city
-        state
-      }
-      summary
     }
   } `
   

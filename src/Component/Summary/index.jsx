@@ -8,7 +8,6 @@ import './summary.scss'
 
 function Summary () {
     const { data } = useQuery(getCompanysummry);
-    console.log('Sdata', data)
     return (
         <>
             <div className='main_summry'>
