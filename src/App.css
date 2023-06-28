@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  background: url(../src/Asstes/Images/wp2284535.jpg) no-repeat;
+  min-height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  color: red;
+}
